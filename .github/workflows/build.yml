@@ -2,26 +2,24 @@ name: Build and run Maestro tests (Native Android)
 
 on:
   push:
-    branches: [master]
+    branches: [ master ]
   pull_request:
-    branches: [master]
+    branches: [ master ]
 
 jobs:
-  build:
+  maestro-cloud:
     runs-on: ubuntu-latest
+    outputs:
+      app: app/build/outputs/apk/debug
     steps:
       - uses: actions/checkout@v3
       - uses: actions/setup-java@v3
         with:
-          java-version: 17        # ⚠️ prefira 17, o 11 está obsoleto em muitos projetos
+          java-version: 11
           distribution: 'temurin'
-
-      - name: Build APK
-        run: ./gradlew assembleDebug
-
-     
+      - run: ./gradlew assembleDebug
       - uses: mobile-dev-inc/action-maestro-cloud@v2.0.2
         with:
-          api-key: rb_AYhWA9eHGSIo6sjqCiF06OWINTauVmsuoh7wRmwKla4HaJcKp2gyI0O79yHHtAzTDjbRwWWxCo7HEBizY2Az0RAH3CSCYBQ4Kxj  # ⚠️ veja aviso abaixo
+          api-key: rb_qrou5mJ5xbXwmPlGuRlZmOS8lQMu0K3FFuC4zX3PKOv9EIfHHW7slVpnWzqzmeM4DdTQqQSaffu1XQIz5h8Mbu3Sl5oP4tkQEKj
           project-id: proj_01kjbftdsye4f9dqavy9nhs0fz
-          app-file: qazandofood.apk
+          app-file: qazandofood
