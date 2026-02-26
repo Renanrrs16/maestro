@@ -25,4 +25,4 @@ jobs:
         with:
           api-key: rb_qrou5mJ5xbXwmPlGuRlZmOS8lQMu0K3FFuC4zX3PKOv9EIfHHW7slVpnWzqzmeM4DdTQqQSaffu1XQIz5h8Mbu3Sl5oP4tkQEKj
           project-id: proj_01kjbftdsye4f9dqavy9nhs0fz
-          app-file: qazandofood
+          app-file: qazandofood.apk
