@@ -24,4 +24,5 @@ jobs:
       - uses: mobile-dev-inc/action-maestro-cloud@v2.0.2
         with:
           api-key: rb_SQkQCyUZEWHBNiy46E3TYzxZxqfqsCcQYXJqxwgJkTLU7m5JwkZMztvWRPNEytZl1vIpBqu8rsJrz4CGMxUQUCqOlzDBGanHeeK
+          project-id: proj_01kjbftdsye4f9dqavy9nhs0fz
           app-file: qazandofood.apk
